@@ -11,6 +11,7 @@ from bs4 import BeautifulSoup
 BASE_URL = "https://webscraper.io/"
 HOME_URL = urljoin(BASE_URL, "test-sites/e-commerce/allinone")
 
+
 PRODUCTS_OUTPUT_CSV_PATH = "products.csv"
 
 
