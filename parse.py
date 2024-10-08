@@ -4,9 +4,11 @@ import sys
 from dataclasses import dataclass, fields, astuple
 from typing import List
 from urllib.parse import urljoin
-
+from selenium.webdriver.common.by import By
 import requests
 from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.webdriver.remote.webdriver import WebDriver
 
 BASE_URL = "https://webscraper.io/"
 HOME_URL = urljoin(BASE_URL, "test-sites/e-commerce/allinone")
@@ -22,9 +24,18 @@ class Product:
     price: float
     rating: int
     num_of_reviews: int
-
+    additional_info: dict
 
 PRODUCT_FIELDS = [field.name for field in fields(Product)]
+
+_driver: WebDriver | None = None
+
+def get_driver() -> WebDriver:
+    return _driver
+
+def set_driver(new_driver: WebDriver):
+    global _driver
+    _driver = new_driver
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -36,9 +47,34 @@ logging.basicConfig(
 )
 
 
+def parse_hdd_block_prices(product_soup: BeautifulSoup) -> dict[str, float]:
+    # get detailed_url
+    # Driver get this page
+    # Driver find swatches
+    # Driver for each button -> button click (if clickable) -> get price
+    detailed_url = urljoin(BASE_URL, product_soup.select_one(".title")["href"])
+    driver = get_driver() #bad practice
+    driver.get(detailed_url)
+    dropdowns = driver.find_element(By.CSS_SELECTOR, "select[aria-label='color']")
+    items = dropdowns.find_elements(By.CSS_SELECTOR, "option.dropdown-item")
+
+    prices = {}
+
+
+    for item in items:
+        if not item.get_property("disabled"):
+            item.click()
+            prices[item.get_property("value")] = float(driver.find_element(
+                By.CLASS_NAME, "price"
+            ).text.replace("$", ""))
+
+    return prices
+
+
 # [attr for attr in dir(obj)]
 
 def parse_single_product(product_soup: BeautifulSoup) -> Product:
+    hdd_prices = parse_hdd_block_prices(product_soup)
     return (Product(
         title=product_soup.select_one("a.title")["title"],
         description=product_soup.select_one(".description").text,
@@ -46,7 +82,8 @@ def parse_single_product(product_soup: BeautifulSoup) -> Product:
         rating=int(product_soup.select_one("p[data-rating]")["data-rating"]),
         num_of_reviews=int(product_soup.select_one(
             "div.ratings > .review-count"
-        ).text.split()[0])
+        ).text.split()[0]),
+        additional_info={"hdd_prices": hdd_prices}
     ))
 
 
@@ -93,8 +130,10 @@ def write_products_to_csv(products: list[Product]) -> None:
 
 
 def main():
-    products = get_home_products()
-    write_products_to_csv(products)
+    with webdriver.Chrome() as new_driver:
+        set_driver(new_driver)
+        products = get_home_products()
+        # write_products_to_csv(products)
 
 
 if __name__ == '__main__':

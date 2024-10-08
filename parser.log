@@ -5,3 +5,90 @@
 [    INFO]: Start parsing laptops
 [   DEBUG]: Starting new HTTPS connection (1): webscraper.io:443
 [   DEBUG]: https://webscraper.io:443 "GET /test-sites/e-commerce/allinone HTTP/11" 200 None
+[    INFO]: Start parsing laptops
+[   DEBUG]: Starting new HTTPS connection (1): webscraper.io:443
+[   DEBUG]: https://webscraper.io:443 "GET /test-sites/e-commerce/allinone HTTP/11" 200 None
+[   DEBUG]: Selenium Manager binary found at: C:\Users\AcerNitro7\PycharmProjects\Scraping_lesson\.venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe
+[   DEBUG]: Executing process: C:\Users\AcerNitro7\PycharmProjects\Scraping_lesson\.venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --debug --language-binding python --output json
+[   DEBUG]: chromedriver not found in PATH
+[   DEBUG]: chrome detected at C:\Program Files\Google\Chrome\Application\chrome.exe
+[   DEBUG]: Running command: wmic datafile where name='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' get Version /value
+[   DEBUG]: Output: "\r\r\n\r\r\nVersion=129.0.6668.90\r\r\n\r\r\n\r\r\n\r"
+[   DEBUG]: Detected browser: chrome 129.0.6668.90
+[   DEBUG]: Required driver: chromedriver 129.0.6668.89
+[   DEBUG]: chromedriver 129.0.6668.89 already in the cache
+[   DEBUG]: Driver path: C:\Users\AcerNitro7\.cache\selenium\chromedriver\win64\129.0.6668.89\chromedriver.exe
+[   DEBUG]: Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe
+[   DEBUG]: Started executable: `C:\Users\AcerNitro7\.cache\selenium\chromedriver\win64\129.0.6668.89\chromedriver.exe` in a child process with pid: 29072 using 0 to output -3
+[   DEBUG]: POST http://localhost:63600/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}
+[   DEBUG]: Starting new HTTP connection (1): localhost:63600
+[   DEBUG]: http://localhost:63600 "POST /session HTTP/11" 200 0
+[   DEBUG]: Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"129.0.6668.90","chrome":{"chromedriverVersion":"129.0.6668.89 (951c0b97221f8d4ba37cf97d324505c832251cf9-refs/branch-heads/6668@{#1503})","userDataDir":"C:\\Users\\ACERNI~1\\AppData\\Local\\Temp\\scoped_dir29072_1796574505"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:63604"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"d7ea0ef84c24678616aae73eb6211177"}} | headers=HTTPHeaderDict({'Content-Length': '885', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+[   DEBUG]: Finished Request
+[   DEBUG]: POST http://localhost:63600/session/d7ea0ef84c24678616aae73eb6211177/url {'url': 'https://webscraper.io/test-sites/e-commerce/allinone/product/128'}
+[   DEBUG]: http://localhost:63600 "POST /session/d7ea0ef84c24678616aae73eb6211177/url HTTP/11" 200 0
+[   DEBUG]: Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+[   DEBUG]: Finished Request
+[   DEBUG]: POST http://localhost:63600/session/d7ea0ef84c24678616aae73eb6211177/element {'using': 'css selector', 'value': "select[aria-label='color']"}
+[   DEBUG]: http://localhost:63600 "POST /session/d7ea0ef84c24678616aae73eb6211177/element HTTP/11" 404 0
+[   DEBUG]: Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"select[aria-label='color']\"}\n  (Session info: chrome=129.0.6668.90)","stacktrace":"\tGetHandleVerifier [0x00007FF72FAFB645+29573]\n\t(No symbol) [0x00007FF72FA70470]\n\t(No symbol) [0x00007FF72F92B6EA]\n\t(No symbol) [0x00007FF72F97F815]\n\t(No symbol) [0x00007FF72F97FA6C]\n\t(No symbol) [0x00007FF72F9CB917]\n\t(No symbol) [0x00007FF72F9A733F]\n\t(No symbol) [0x00007FF72F9C86BC]\n\t(No symbol) [0x00007FF72F9A70A3]\n\t(No symbol) [0x00007FF72F9712DF]\n\t(No symbol) [0x00007FF72F972441]\n\tGetHandleVerifier [0x00007FF72FE2C58D+3375821]\n\tGetHandleVerifier [0x00007FF72FE77987+3684039]\n\tGetHandleVerifier [0x00007FF72FE6CDAB+3640043]\n\tGetHandleVerifier [0x00007FF72FBBB7C6+816390]\n\t(No symbol) [0x00007FF72FA7B77F]\n\t(No symbol) [0x00007FF72FA775A4]\n\t(No symbol) [0x00007FF72FA77740]\n\t(No symbol) [0x00007FF72FA6659F]\n\tBaseThreadInitThunk [0x00007FFDDE467374+20]\n\tRtlUserThreadStart [0x00007FFDE02DCC91+33]\n"}} | headers=HTTPHeaderDict({'Content-Length': '1066', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+[   DEBUG]: Finished Request
+[    INFO]: Start parsing laptops
+[   DEBUG]: Starting new HTTPS connection (1): webscraper.io:443
+[   DEBUG]: https://webscraper.io:443 "GET /test-sites/e-commerce/allinone HTTP/11" 200 None
+[   DEBUG]: Selenium Manager binary found at: C:\Users\AcerNitro7\PycharmProjects\Scraping_lesson\.venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe
+[   DEBUG]: Executing process: C:\Users\AcerNitro7\PycharmProjects\Scraping_lesson\.venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --debug --language-binding python --output json
+[   DEBUG]: chromedriver not found in PATH
+[   DEBUG]: chrome detected at C:\Program Files\Google\Chrome\Application\chrome.exe
+[   DEBUG]: Running command: wmic datafile where name='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' get Version /value
+[   DEBUG]: Output: "\r\r\n\r\r\nVersion=129.0.6668.90\r\r\n\r\r\n\r\r\n\r"
+[   DEBUG]: Detected browser: chrome 129.0.6668.90
+[   DEBUG]: Required driver: chromedriver 129.0.6668.89
+[   DEBUG]: chromedriver 129.0.6668.89 already in the cache
+[   DEBUG]: Driver path: C:\Users\AcerNitro7\.cache\selenium\chromedriver\win64\129.0.6668.89\chromedriver.exe
+[   DEBUG]: Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe
+[   DEBUG]: Started executable: `C:\Users\AcerNitro7\.cache\selenium\chromedriver\win64\129.0.6668.89\chromedriver.exe` in a child process with pid: 15884 using 0 to output -3
+[   DEBUG]: POST http://localhost:63666/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}
+[   DEBUG]: Starting new HTTP connection (1): localhost:63666
+[   DEBUG]: http://localhost:63666 "POST /session HTTP/11" 200 0
+[   DEBUG]: Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"129.0.6668.90","chrome":{"chromedriverVersion":"129.0.6668.89 (951c0b97221f8d4ba37cf97d324505c832251cf9-refs/branch-heads/6668@{#1503})","userDataDir":"C:\\Users\\ACERNI~1\\AppData\\Local\\Temp\\scoped_dir15884_1885968575"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:63670"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"ff384438063c0d4edc24cafdde82cdd1"}} | headers=HTTPHeaderDict({'Content-Length': '885', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+[   DEBUG]: Finished Request
+[   DEBUG]: POST http://localhost:63666/session/ff384438063c0d4edc24cafdde82cdd1/url {'url': 'https://webscraper.io/test-sites/e-commerce/allinone/product/128'}
+[   DEBUG]: http://localhost:63666 "POST /session/ff384438063c0d4edc24cafdde82cdd1/url HTTP/11" 200 0
+[   DEBUG]: Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+[   DEBUG]: Finished Request
+[   DEBUG]: POST http://localhost:63666/session/ff384438063c0d4edc24cafdde82cdd1/element {'using': 'css selector', 'value': "select[aria-label='color']"}
+[   DEBUG]: http://localhost:63666 "POST /session/ff384438063c0d4edc24cafdde82cdd1/element HTTP/11" 404 0
+[   DEBUG]: Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"select[aria-label='color']\"}\n  (Session info: chrome=129.0.6668.90)","stacktrace":"\tGetHandleVerifier [0x00007FF72FAFB645+29573]\n\t(No symbol) [0x00007FF72FA70470]\n\t(No symbol) [0x00007FF72F92B6EA]\n\t(No symbol) [0x00007FF72F97F815]\n\t(No symbol) [0x00007FF72F97FA6C]\n\t(No symbol) [0x00007FF72F9CB917]\n\t(No symbol) [0x00007FF72F9A733F]\n\t(No symbol) [0x00007FF72F9C86BC]\n\t(No symbol) [0x00007FF72F9A70A3]\n\t(No symbol) [0x00007FF72F9712DF]\n\t(No symbol) [0x00007FF72F972441]\n\tGetHandleVerifier [0x00007FF72FE2C58D+3375821]\n\tGetHandleVerifier [0x00007FF72FE77987+3684039]\n\tGetHandleVerifier [0x00007FF72FE6CDAB+3640043]\n\tGetHandleVerifier [0x00007FF72FBBB7C6+816390]\n\t(No symbol) [0x00007FF72FA7B77F]\n\t(No symbol) [0x00007FF72FA775A4]\n\t(No symbol) [0x00007FF72FA77740]\n\t(No symbol) [0x00007FF72FA6659F]\n\tBaseThreadInitThunk [0x00007FFDDE467374+20]\n\tRtlUserThreadStart [0x00007FFDE02DCC91+33]\n"}} | headers=HTTPHeaderDict({'Content-Length': '1066', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+[   DEBUG]: Finished Request
+[    INFO]: Start parsing laptops
+[   DEBUG]: Starting new HTTPS connection (1): webscraper.io:443
+[   DEBUG]: https://webscraper.io:443 "GET /test-sites/e-commerce/allinone HTTP/11" 200 None
+[    INFO]: Start parsing laptops
+[   DEBUG]: Starting new HTTPS connection (1): webscraper.io:443
+[   DEBUG]: https://webscraper.io:443 "GET /test-sites/e-commerce/allinone HTTP/11" 200 None
+[   DEBUG]: Selenium Manager binary found at: C:\Users\AcerNitro7\PycharmProjects\Scraping_lesson\.venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe
+[   DEBUG]: Executing process: C:\Users\AcerNitro7\PycharmProjects\Scraping_lesson\.venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --debug --language-binding python --output json
+[   DEBUG]: chromedriver not found in PATH
+[   DEBUG]: chrome detected at C:\Program Files\Google\Chrome\Application\chrome.exe
+[   DEBUG]: Running command: wmic datafile where name='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' get Version /value
+[   DEBUG]: Output: "\r\r\n\r\r\nVersion=129.0.6668.90\r\r\n\r\r\n\r\r\n\r"
+[   DEBUG]: Detected browser: chrome 129.0.6668.90
+[   DEBUG]: Required driver: chromedriver 129.0.6668.89
+[   DEBUG]: chromedriver 129.0.6668.89 already in the cache
+[   DEBUG]: Driver path: C:\Users\AcerNitro7\.cache\selenium\chromedriver\win64\129.0.6668.89\chromedriver.exe
+[   DEBUG]: Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe
+[   DEBUG]: Started executable: `C:\Users\AcerNitro7\.cache\selenium\chromedriver\win64\129.0.6668.89\chromedriver.exe` in a child process with pid: 28516 using 0 to output -3
+[   DEBUG]: POST http://localhost:63744/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}
+[   DEBUG]: Starting new HTTP connection (1): localhost:63744
+[   DEBUG]: http://localhost:63744 "POST /session HTTP/11" 200 0
+[   DEBUG]: Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"129.0.6668.90","chrome":{"chromedriverVersion":"129.0.6668.89 (951c0b97221f8d4ba37cf97d324505c832251cf9-refs/branch-heads/6668@{#1503})","userDataDir":"C:\\Users\\ACERNI~1\\AppData\\Local\\Temp\\scoped_dir28516_196496632"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:63747"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"8f010c0d7059f08b0bac7a91e02b07b9"}} | headers=HTTPHeaderDict({'Content-Length': '884', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+[   DEBUG]: Finished Request
+[   DEBUG]: POST http://localhost:63744/session/8f010c0d7059f08b0bac7a91e02b07b9/url {'url': 'https://webscraper.io/test-sites/e-commerce/allinone/product/128'}
+[   DEBUG]: http://localhost:63744 "POST /session/8f010c0d7059f08b0bac7a91e02b07b9/url HTTP/11" 200 0
+[   DEBUG]: Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+[   DEBUG]: Finished Request
+[   DEBUG]: POST http://localhost:63744/session/8f010c0d7059f08b0bac7a91e02b07b9/element {'using': 'css selector', 'value': "select[aria-label='color']"}
+[   DEBUG]: http://localhost:63744 "POST /session/8f010c0d7059f08b0bac7a91e02b07b9/element HTTP/11" 404 0
+[   DEBUG]: Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"select[aria-label='color']\"}\n  (Session info: chrome=129.0.6668.90)","stacktrace":"\tGetHandleVerifier [0x00007FF72FAFB645+29573]\n\t(No symbol) [0x00007FF72FA70470]\n\t(No symbol) [0x00007FF72F92B6EA]\n\t(No symbol) [0x00007FF72F97F815]\n\t(No symbol) [0x00007FF72F97FA6C]\n\t(No symbol) [0x00007FF72F9CB917]\n\t(No symbol) [0x00007FF72F9A733F]\n\t(No symbol) [0x00007FF72F9C86BC]\n\t(No symbol) [0x00007FF72F9A70A3]\n\t(No symbol) [0x00007FF72F9712DF]\n\t(No symbol) [0x00007FF72F972441]\n\tGetHandleVerifier [0x00007FF72FE2C58D+3375821]\n\tGetHandleVerifier [0x00007FF72FE77987+3684039]\n\tGetHandleVerifier [0x00007FF72FE6CDAB+3640043]\n\tGetHandleVerifier [0x00007FF72FBBB7C6+816390]\n\t(No symbol) [0x00007FF72FA7B77F]\n\t(No symbol) [0x00007FF72FA775A4]\n\t(No symbol) [0x00007FF72FA77740]\n\t(No symbol) [0x00007FF72FA6659F]\n\tBaseThreadInitThunk [0x00007FFDDE467374+20]\n\tRtlUserThreadStart [0x00007FFDE02DCC91+33]\n"}} | headers=HTTPHeaderDict({'Content-Length': '1066', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+[   DEBUG]: Finished Request
