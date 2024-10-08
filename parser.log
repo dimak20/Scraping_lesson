@@ -1,0 +1,7 @@
+[    INFO]: Start parsing laptops
+[    INFO]: Start parsing laptops
+[   DEBUG]: Starting new HTTPS connection (1): webscraper.io:443
+[   DEBUG]: https://webscraper.io:443 "GET /test-sites/e-commerce/allinone HTTP/11" 200 None
+[    INFO]: Start parsing laptops
+[   DEBUG]: Starting new HTTPS connection (1): webscraper.io:443
+[   DEBUG]: https://webscraper.io:443 "GET /test-sites/e-commerce/allinone HTTP/11" 200 None
